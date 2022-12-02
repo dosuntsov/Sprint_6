@@ -11,10 +11,11 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class)
 public class TestClassFeline {
     @Test
-    public void checkCorrectGetFamily(){
+    public void checkCorrectGetFamily() {
         Feline feline = new Feline();
-        Assert.assertEquals("Кошачьи",feline.getFamily());
+        Assert.assertEquals("Кошачьи", feline.getFamily());
     }
+
     @Test
     public void getPredatorFood() throws Exception {
         Feline feline = new Feline();
@@ -24,13 +25,15 @@ public class TestClassFeline {
 
     @Mock
     Feline feline;
+
     @Test
-    public void whenTwoKittensIsGivenReturnsTwo(){
+    public void whenTwoKittensIsGivenReturnsTwo() {
         feline.getKittens(2);
         Mockito.verify(feline).getKittens(2);
     }
+
     @Test
-    public void whenNoArgumentInGetKittensGetOneKitten(){
+    public void whenNoArgumentInGetKittensGetOneKitten() {
         Feline feline = new Feline();
         Assert.assertEquals(1, feline.getKittens());
     }

@@ -10,12 +10,13 @@ public class TestClassCat {
     Feline feline = new Feline();
 
     @Test
-    public void checkCorrectCatGetSound(){
+    public void checkCorrectCatGetSound() {
         Cat cat = new Cat(feline);
-        Assert.assertEquals("Мяу",cat.getSound());
+        Assert.assertEquals("Мяу", cat.getSound());
     }
+
     @Test
-    public void checkPredatorFood() throws Exception{
+    public void checkPredatorFood() throws Exception {
         Cat cat = new Cat(feline);
         List expected = List.of("Животные", "Птицы", "Рыба");
         Assert.assertEquals(expected, cat.getFood());
